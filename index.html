@@ -17,28 +17,34 @@
             background: linear-gradient(135deg, #006400, #228B22); 
             color: white; 
             text-align: center; 
-            padding: 30px 15px; 
+            padding: 35px 15px; 
         }
         .logo { 
-            max-width: 220px; 
-            margin-bottom: 10px; 
+            max-width: 240px; 
+            margin-bottom: 12px; 
         }
         nav { 
             background: #D4AF37; 
-            padding: 12px; 
+            padding: 14px; 
             text-align: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
         }
         nav a { 
             color: #006400; 
-            margin: 0 12px; 
+            margin: 0 15px; 
             text-decoration: none; 
             font-weight: bold; 
+            transition: color 0.3s; 
         }
+        nav a:hover { color: #228B22; }
+
         .hero { 
             background: linear-gradient(rgba(0, 60, 0, 0.92), rgba(0, 50, 0, 0.92)), url('hero-farm.jpg') center/cover no-repeat; 
             color: white; 
             text-align: center; 
-            padding: 130px 20px; 
+            padding: 140px 20px; 
         }
         .btn-whatsapp { 
             background: #25D366; 
@@ -51,38 +57,52 @@
             display: inline-block; 
             margin: 20px 0; 
             font-weight: bold; 
+            transition: transform 0.3s, box-shadow 0.3s; 
         }
+        .btn-whatsapp:hover { 
+            transform: scale(1.05); 
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4); 
+        }
+
         section { 
-            padding: 50px 20px; 
+            padding: 60px 20px; 
             max-width: 1100px; 
             margin: 0 auto; 
         }
         .section-img { 
             width: 100%; 
-            max-height: 320px; 
+            max-height: 340px; 
             object-fit: cover; 
             border-radius: 12px; 
-            margin-bottom: 25px; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+            margin-bottom: 20px; 
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12); 
+            transition: transform 0.4s ease; 
         }
-        .post { 
+        .section-img:hover { 
+            transform: scale(1.03); 
+        }
+
+        .service-card { 
             background: white; 
             padding: 25px; 
             border-radius: 12px; 
             margin-bottom: 30px; 
             box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
+            transition: all 0.3s ease; 
         }
-        h1, h2 { 
-            color: #006400; 
+        .service-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15); 
         }
-        .gold { 
-            color: #D4AF37; 
-        }
+
+        h1, h2 { color: #006400; }
+        .gold { color: #D4AF37; }
+
         footer { 
             background: #006400; 
             color: white; 
             text-align: center; 
-            padding: 30px; 
+            padding: 35px 20px; 
         }
     </style>
 </head>
@@ -108,14 +128,8 @@
         <h1 style="font-size: 2.2rem; margin-bottom: 15px; text-shadow: 3px 3px 10px rgba(0,0,0,0.9);">Expert Poultry Veterinary Solutions + Health-Boosting Indoor Plants</h1>
         <p style="font-size: 1.2rem; margin-bottom: 25px; text-shadow: 2px 2px 8px rgba(0,0,0,0.8);">Based in Plateau, Nigeria • Practical, innovative advice for poultry farmers worldwide • Achieve higher productivity through smart natural methods</p>
         
-        <p style="font-size: 1.15rem; margin: 20px 0; font-weight: 600; text-shadow: 2px 2px 6px rgba(0,0,0,0.85);">
-            Tell us about your farm challenge and get expert help fast:
-        </p>
-        
         <a href="https://wa.me/2348163431308?text=Hello%20Oba%20AgroTech%2C%20my%20farm%20has%20this%20issue%3A%20" 
-           class="btn-whatsapp" style="font-size: 18px; padding: 16px 35px; margin: 15px 0;">
-            Send Message on WhatsApp Now
-        </a>
+           class="btn-whatsapp">Send Message on WhatsApp Now</a>
         
         <p style="margin-top: 25px; font-weight: bold; text-shadow: 2px 2px 6px rgba(0,0,0,0.9);">
             First 10 serious farmers get a <strong>FREE 10-minute intro consult</strong> this month inshaAllah!
@@ -126,7 +140,7 @@
     <section>
         <h2>Why Farmers Choose Oba AgroTech</h2>
         <img src="why-oba-vet.jpg" alt="Oba AgroTech Poultry Veterinarian" class="section-img">
-        <p>Professional Poultry Veterinary Consultant based in Nigeria. I combine expert veterinary care with smart & natural creativity using beneficial indoor flowering plants to help you achieve higher productivity and healthier flocks sustainably.</p>
+        <p>Professional Poultry Veterinary Consultant based in Plateau, Nigeria. I combine expert veterinary care with smart & natural creativity using beneficial indoor flowering plants to help you achieve higher productivity and healthier flocks sustainably.</p>
         <ul>
             <li>Accurate disease diagnosis and treatment plans</li>
             <li>Biosecurity and flock management advice</li>
@@ -138,26 +152,34 @@
     <!-- SERVICES -->
     <section style="background:#f0f8f0;">
         <h2>Our Key Services</h2>
-        <img src="services-main.jpg" alt="Oba AgroTech Services" class="section-img">
 
-        <ul>
-            <li><strong>Online Poultry Consultations</strong> — Diagnosis, treatment plans, vaccination schedules, and flock health management via WhatsApp.</li>
-            <img src="consultation.jpg" alt="Online poultry consultation" class="section-img">
+        <div class="service-card">
+            <img src="online-consultations.jpg" alt="Online Poultry Consultations" class="section-img">
+            <h3>Online Poultry Consultations</h3>
+            <p>Real-time diagnosis, treatment plans, vaccination advice, and flock health management via WhatsApp or video call.</p>
+            <a href="https://wa.me/2348163431308?text=Hello%20Oba%20AgroTech%2C%20I%20need%20online%20poultry%20consultation" class="btn-whatsapp" style="padding:12px 25px; font-size:16px;">Get Consultation Now</a>
+        </div>
 
-            <li><strong>Plant Integration Guidance</strong> — Using marigold, lavender, basil, aloe vera and other health-benefit plants for natural pest control, stress reduction, and better farm environment.</li>
-            <img src="plant-integration.jpg" alt="Plant integration with poultry" class="section-img">
+        <div class="service-card">
+            <img src="plant-integration.jpg" alt="Plant Integration Guidance" class="section-img">
+            <h3>Plant Integration Guidance</h3>
+            <p>Using marigold, lavender, basil, aloe vera and other health-benefit plants for natural pest control, stress reduction, and better farm environment.</p>
+            <a href="https://wa.me/2348163431308?text=Hello%20Oba%20AgroTech%2C%20I%20need%20plant%20integration%20guidance" class="btn-whatsapp" style="padding:12px 25px; font-size:16px;">Learn Plant Solutions</a>
+        </div>
 
-            <li><strong>Custom Farm Productivity Plans</strong> — Tailored solutions for backyard or commercial operations.</li>
-            
-         <img src="custom-productivity.jpg" alt="Custom farm productivity plans" class="section-img">
+        <div class="service-card">
+            <img src="custom-plans.jpg" alt="Custom Productivity Plans" class="section-img">
+            <h3>Custom Productivity Plans</h3>
+            <p>Tailored farm plans combining vet care and natural methods to boost yields and reduce losses.</p>
+            <a href="https://wa.me/2348163431308?text=Hello%20Oba%20AgroTech%2C%20I%20need%20a%20custom%20productivity%20plan" class="btn-whatsapp" style="padding:12px 25px; font-size:16px;">Get Custom Plan</a>
+        </div>
 
-            <li><strong>Coming Soon:</strong> Livestock & Beneficial Plant Marketplace</li>
-
-<img src="marketplace.jpg" alt="Marketplace" class="section-img">
-
-        </ul>
-
-        <p style="text-align:center;"><a href="services.html" style="color:#006400; font-weight:bold;">Explore All Services →</a></p>
+        <div class="service-card">
+            <img src="marketplace.jpg" alt="Livestock & Plant Marketplace" class="section-img">
+            <h3>Livestock & Plant Marketplace (Coming Soon)</h3>
+            <p>Quality day-old chicks, supplements, beneficial plants, and farm equipment in one trusted place.</p>
+            <a href="https://wa.me/2348163431308?text=Hello%20Oba%20AgroTech%2C%20tell%20me%20more%20about%20the%20marketplace" class="btn-whatsapp" style="padding:12px 25px; font-size:16px;">Notify Me When Ready</a>
+        </div>
     </section>
 
     <!-- BLOOM WITH YOUR FLOCK -->
@@ -173,7 +195,7 @@
         <p style="text-align:center;"><a href="bloom.html" style="color:#006400; font-weight:bold;">Read Full Practical Guides →</a></p>
     </section>
 
-    <!-- TIPS & GUIDES (with Newcastle Post) -->
+    <!-- TIPS & GUIDES -->
     <section style="background:#f0f8f0;">
         <h2>Tips & Guides</h2>
         <p>Practical advice to help you run a healthier, more productive poultry farm using smart natural methods.</p>
@@ -191,13 +213,7 @@
         <p style="max-width: 600px; margin: 0 auto 30px;">Describe your challenge (disease, low production, plant advice, etc.) and I'll respond quickly with practical solutions.</p>
         
         <a href="https://wa.me/2348163431308?text=Hello%20Oba%20AgroTech%2C%20here%20is%20my%20farm%20challenge%3A%20" 
-           style="background:#25D366; color:white; padding:18px 40px; border-radius:50px; text-decoration:none; font-size:18px; font-weight:bold; display:inline-block;">
-            Start Your Consultation Now
-        </a>
-        
-        <p style="margin-top: 20px; color:#006400; font-size:0.95rem;">
-            Or call/WhatsApp: <strong>0816 343 1308</strong>
-        </p>
+           class="btn-whatsapp">Start Your Consultation Now</a>
     </section>
 
     <footer>
