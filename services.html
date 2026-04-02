@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Oba AgroTech</title>
+    <style>
+        body { 
+            font-family: system-ui, Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background: #f8f9fa; 
+            color: #333; 
+            line-height: 1.6; 
+        }
+        header { 
+            background: linear-gradient(135deg, #006400, #228B22); 
+            color: white; 
+            text-align: center; 
+            padding: 35px 15px; 
+        }
+        .logo { 
+            max-width: 220px; 
+            margin-bottom: 12px; 
+        }
+        nav { 
+            background: #D4AF37; 
+            padding: 14px; 
+            text-align: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 100; 
+        }
+        nav a { 
+            color: #006400; 
+            margin: 0 15px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            transition: color 0.3s; 
+        }
+        nav a:hover { color: #228B22; }
+
+        .service-card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 12px; 
+            margin-bottom: 40px; 
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1); 
+            transition: all 0.4s ease; 
+        }
+        .service-card:hover { 
+            transform: translateY(-10px); 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15); 
+        }
+        .section-img { 
+            width: 100%; 
+            max-height: 360px; 
+            object-fit: cover; 
+            border-radius: 12px; 
+            margin-bottom: 25px; 
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12); 
+        }
+        .btn-whatsapp { 
+            background: #25D366; 
+            color: white; 
+            padding: 14px 32px; 
+            border: none; 
+            border-radius: 50px; 
+            font-size: 17px; 
+            text-decoration: none; 
+            display: inline-block; 
+            margin-top: 15px; 
+            font-weight: bold; 
+            transition: transform 0.3s; 
+        }
+        .btn-whatsapp:hover { 
+            transform: scale(1.05); 
+        }
+        h1, h2 { color: #006400; }
+        .gold { color: #D4AF37; }
+        footer { 
+            background: #006400; 
+            color: white; 
+            text-align: center; 
+            padding: 35px 20px; 
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="oba-vet-logo.png" alt="Oba AgroTech Logo" class="logo">
+        <h1>Oba AgroTech</h1>
+        <p class="gold" style="font-size: 1.35rem; margin-top: 8px;">Productivity Through Smart & Natural Creativity 🌱🐔</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="tips.html">Tips & Guides</a>
+        <a href="bloom.html">Bloom with Your Flock</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <section style="padding-top: 40px;">
+        <h2 style="text-align:center; margin-bottom: 40px;">Our Key Services</h2>
+
+        <!-- Service 1 -->
+        <div class="service-card">
+            <img src="online-consultations.jpg" alt="Online Poultry Consultations" class="section-img">
+            <h2>Online Poultry Consultations</h2>
+            <p>Real-time expert advice from a professional poultry veterinarian. Get accurate diagnosis, treatment plans, vaccination schedules, biosecurity tips, and flock health management via WhatsApp or video call.</p>
+            <p><strong>Perfect for:</strong> Disease outbreaks, low production, sudden deaths, or routine check-ups.</p>
+            <a href="https://wa.me/2348163431308?text=Hello%20Oba%20AgroTech%2C%20I%20need%20online%20poultry%20consultation%20for%20my%20farm" 
+               class="btn-whatsapp">Book Online Consultation Now</a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+            <img src="plant-integration.jpg" alt="Plant Integration Guidance" class="section-img">
+            <h2>Plant Integration Guidance</h2>
+            <p>Learn how to use beneficial indoor and outdoor flowering plants (marigold, lavender, aloe vera, basil, peppermint, etc.) to naturally reduce pests, stress, and disease while improving air quality and immunity in your poultry farm.</p>
+            <a href="https://wa.me/2348163431308?text=Hello%20Oba%20AgroTech%2C%20I%20need%20plant%20integration%20guidance%20for%20my%20poultry%20farm" 
+               class="btn-whatsapp">Get Plant Integration Advice</a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+            <img src="custom-plans.jpg" alt="Custom Productivity Plans" class="section-img">
+            <h2>Custom Productivity Plans</h2>
+            <p>Personalized farm improvement plans that combine veterinary best practices with smart natural methods. Designed specifically for your flock size, location, and goals to boost egg/meat production and reduce losses.</p>
+            <a href="https://wa.me/2348163431308?text=Hello%20Oba%20AgroTech%2C%20I%20need%20a%20custom%20productivity%20plan%20for%20my%20farm" 
+               class="btn-whatsapp">Request Custom Plan</a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+            <img src="marketplace.jpg" alt="Livestock & Plant Marketplace" class="section-img">
+            <h2>Livestock & Plant Marketplace (Coming Soon)</h2>
+            <p>One trusted place for quality day-old chicks, supplements, beneficial plants, feed, and equipment. All selected and recommended based on real farm performance and natural farming principles.</p>
+            <a href="https://wa.me/2348163431308?text=Hello%20Oba%20AgroTech%2C%20I'm%20interested%20in%20the%20upcoming%20marketplace" 
+               class="btn-whatsapp">Notify Me When Ready</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Oba AgroTech • Plateau, Nigeria • Serving Poultry Farmers Globally</p>
+        <p>Productivity Through Smart & Natural Creativity – Practical solutions for thriving farms.</p>
+    </footer>
+
+</body>
+</html>
