@@ -1,0 +1,11 @@
+{
+  "name": "Oba Agrotech Farm Link",
+  "short_name": "Farm Link",
+  "description": "Integrated agricultural support for crop and livestock farmers.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f7f2",
+  "theme_color": "#123d2b",
+  "icons": [{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}
