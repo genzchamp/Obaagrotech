@@ -35,3 +35,9 @@ The current front-end MVP brings together five support areas:
 ## Deployment
 
 The project is a static site hosted with GitHub Pages. The root `index.html`, `sw.js`, `manifest.webmanifest` and `icon.svg` are the app files. After a commit reaches the configured Pages branch, allow a short time for GitHub Pages to publish it. Use HTTPS for service-worker and install support.
+
+## Live local weather upgrade
+
+The Climate section now includes a 7-day forecast lookup using the free Open-Meteo geocoding and forecast endpoints (no API key). A farmer can search for a town, view daily weather condition, minimum/maximum temperature, precipitation probability/amount and maximum wind speed. The last successful forecast is saved in local browser storage and can be viewed offline with its saved timestamp. The app labels it as a saved copy so an old forecast is not mistaken for a live update.
+
+Simple planning signals highlight forecast days with high rain probability / rainfall or high maximum temperature. These are basic prompts for farm checks, not official weather alerts or crop-specific predictions. Forecast data needs connectivity to refresh.
